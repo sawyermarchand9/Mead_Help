@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meadhelp?/Videos</title>
+	<link rel="stylesheet" type="text/css" href="video_page.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<meta charset="utf-8">
+</head>
+<body background="back_ground_3.png">
+
+	<img src="mead_logo.png" class="logo">
+	<img src="mead_logo.png" class="logo2">
+	<h1 style="text-align:cente">Mead Help?</h1>
+	
+	<div class="backbone">
+		<div class="container">
+			<a href="index.html"><p>Home</p></a>	
+			<a href="image_page.html"><p>Images</p></a>
+			<a href="mead_app.html"><p>MeadHelp? App</p></a>
+			<a href="meadhelp_feedback.html"><p>Feedback</p></a>
+		</div>
+
+		<h2 style="text-align:center; font-weight:300;">Videos</h2>
+		<!-- these are not my videos, however to save time i used them as examples. I do plan on making future videos, I just didnt have the resources. -->
+		
+
+		<div class="content" style="max-width:800px">
+			<iframe class="mySlides" width="560" height="315" src="https://www.youtube.com/embed/xMeSGNBOUP8" frameborder="0" allowfullscreen></iframe>
+			<iframe class="mySlides" width="560" height="315" src="https://www.youtube.com/embed/1IZAuvG1qzg" frameborder="0" allowfullscreen></iframe>
+			<iframe class="mySlides" width="560" height="315" src="https://www.youtube.com/embed/CSFIizKfaIo" frameborder="0" allowfullscreen></iframe>
+		</div>
+
+		<!-- <div class="center">
+		<div class="section"> -->
+    		<button class="button_light-grey1" onclick="plusDivs(-1)">❮ Prev</button>
+    		<button class="button_light-grey2" onclick="plusDivs(1)">Next ❯</button>
+
+		<br>
+		<hr>
+		<h4>Hello!</h4>
+		<p id="info">Here are a few different videos that may help you find your way when exploring the world of mead. Do you need more help? Try using the MeadHelp app, it will inspire and give you new and interesting ideas using a randomized sequence of different ingredients.</p>
+		<hr>
+
+		<a href="https://www.facebook.com"><img src="face-book_logo.png" class="face"></a>
+		<a href="mailto:sawyermarchand9@gmail.com"><img src="email.png" class="face" style="margin-left:90px;"></a>
+		<a href="https://www.youtube.com"><img src="youtube_logo.png" class="face" style="margin-left:85px;"></a>
+
+		<footer><a href="mead_help_home.html">&copy; 2017 Meadhelp?.com<a> | Legal | Other Helpful Websites</footer>
+
+	</div>
+
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			showDivs(slideIndex += n);
+			}
+
+			function currentDiv(n) {
+			showDivs(slideIndex = n);
+			}
+
+			function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+				if (n > x.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = x.length}
+				for (i = 0; i < x.length; i++) {
+    			x[i].style.display = "none";  
+  				}
+				for (i = 0; i < dots.length; i++) {
+    		dots[i].className = dots[i].className.replace(" red", "");
+  			}
+  			x[slideIndex-1].style.display = "block";  
+  			dots[slideIndex-1].className += " red";
+			}
+		</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 40px 10px;
+  line-height: 1.65em;
+ /* background: #B21110;*/
+  color: white;
+  font-weight: 300;
+
+}
+h1 {
+    color:black;
+    text-align: center;
+    font-size: 50px;
+    /*text-shadow: 10px 15px 10px black;*/
+    font-family: 'Open Sans', sans-serif;
+    font-weight:500 ;
+
+}
+.logo { 
+    height:90px;
+    width: 90px;
+    box-shadow: none;
+    position: absolute;
+    margin-top: -30px;
+    margin-left:635px;
+ }
+ .logo2 { 
+    height:90px;
+    width: 90px;
+    box-shadow: none;
+    position: absolute;
+    margin-top: -30px;
+    margin-left:230px;
+  }
+  .container {
+    overflow: hidden;
+    background-color: #262d3a;
+    font-family: Arial;
+    text-align: center;
+    box-shadow: 0px 2px 5px black;
+    
+
+}
+
+.container a {
+    position: relative;
+    float: left;
+    margin-left: 5%;
+    font-size: 16px;
+    color: white;
+    left:22%;
+    padding: 1px 10px;
+    text-decoration: none;
+
+
+}
+.container a:hover {
+
+color: #339999;
+
+
+}
+.backbone {
+  background-color:#4c1616;
+  height: 1100px;
+  box-shadow: 5px 15px 25px  black;
+}
+h2 { 
+  font-weight: 400;
+
+}
+button {
+    background: #262d3a;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    padding: .2em .5em;
+    cursor: pointer;
+    margin-left: 50px;
+    float:left;
+    display: block;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-top: 15px; 
+}
+.button_light-grey1 {
+  margin-left: 375px
+}
+img {
+  height: 370px;
+  width: 450px;
+  margin-left: 250px;
+  box-shadow: 5px 5px 5px black;
+}
+#info  {
+  font-weight: 500;
+  font-size: 16px;
+  max-width: 625px;
+  margin-top: -10px;
+  margin-left: 175px;
+}
+h4 {
+  margin-left: 175px;
+}
+.hello {
+  margin-top: -525px;
+}
+hr {
+  
+  width: 610px;
+}
+
+footer { 
+
+    font-size:13px;
+    margin-top: 70px;
+    text-align: center;
+
+ }
+footer a {
+  text-decoration:none;
+  color:white;
+}
+.face {
+    height: 35px;
+    width:35px;
+    box-shadow: none;
+    margin-top: 95px;
+    margin-left: 330px;
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

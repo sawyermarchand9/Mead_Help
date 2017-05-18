@@ -1,0 +1,119 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 40px 10px;
+  line-height: 1.65em;
+ /* background: #B21110;*/
+  color: white;
+  font-weight: 300;
+
+}
+h1 {
+    color:black;
+    text-align: center;
+    font-size: 50px;
+    /*text-shadow: 10px 15px 10px black;*/
+    font-family: 'Open Sans', sans-serif;
+    font-weight:500 ;
+
+}
+.backbone {
+  background-color:#4c1616;
+  height: 1300px;
+  box-shadow: 5px 15px 25px  black; 
+}
+.logo { 
+    height:90px;
+    width: 90px;
+    box-shadow: none;
+    position: absolute;
+    margin-top: -30px;
+    margin-left:635px;
+ }
+ .logo2 { 
+    height:90px;
+    width: 90px;
+    box-shadow: none;
+    position: absolute;
+    margin-top: -30px;
+    margin-left:230px;
+  }
+.container {
+    overflow: hidden;
+    background-color: #262d3a;
+    font-family: Arial;
+    text-align: center;
+    box-shadow: 0px 2px 5px black;
+    
+
+}
+
+.container a {
+    position: relative;
+    float: left;
+    margin-left: 5%;
+    font-size: 16px;
+    color: white;
+    left:22%;
+    padding: 1px 10px;
+    text-decoration: none;
+
+
+}
+.container a:hover {
+
+color: #339999;
+
+
+}
+.choice {
+  float:left;
+
+
+}
+
+.ck {
+  float:left;
+}
+.box_2 { 
+  margin-left: 175px;
+ }
+ textarea { 
+  width: 500px;
+  max-width: 500px;
+  }
+form {
+  font-weight: 400;
+  font-size: 17px;
+}
+#top { 
+  text-align: center;
+  font-size:23px;
+ }
+.end {
+  text-align: center;
+}
+.face {
+    height: 35px;
+    width:35px;
+    box-shadow: none;
+    margin-top: 200px;
+    margin-left: 334px;
+  }
+footer { 
+
+    font-size:13px;
+    margin-top: 50px;
+    text-align: center;
+
+ }
+footer a {
+  text-decoration:none;
+  color:white;
+}
+
+
+
+

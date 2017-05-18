@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meadhelp?/Images</title>
+	<link rel="stylesheet" type="text/css" href="image_style.css">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body background="back_ground_3.png">
+		
+		<div>
+			<img src="mead_logo.png" class="logo">
+			<img src="mead_logo.png" class="logo2">
+			<h1 style="text-align:center;">Mead Help?</h1>
+		</div>
+		<div class="backbone">
+		<div class="container">
+			<a href="index.html"><p>Home</p></a>	
+			<a href="video_page.html"><p>Videos</p></a>
+			<a href="mead_app.html"><p>MeadHelp? App</p></a>
+			<a href="meadhelp_feedback.html"><p>Feedback</p></a>
+		</div>
+		
+		<h2 style="text-align:center;">Images</h2>
+
+
+		<div class="content" style="max-width:800px">
+			<img class="mySlides" src="mead_pic_01.png">
+			<img class="mySlides" src="mead_pic_02.png">
+			<img class="mySlides" src="mead_pic_03.png">
+			<img class="mySlides" src="corker.jpg">
+			<img class="mySlides" src="mead_04.jpeg">
+			<img class="mySlides" src="mead_05.jpeg">
+			<img class="mySlides" src="mead_06.jpg">
+			<img class="mySlides" src="mead_07.jpg">
+			<img class="mySlides" src="mead_08.jpg">
+			<img class="mySlides" src="mead_09.jpg">
+			<img class="mySlides" src="mead_10.jpg">
+		</div>
+			<button class="button_light-grey1" onclick="plusDivs(-1)">❮ Prev</button>
+    		<button class="button_light-grey2" onclick="plusDivs(1)">Next ❯</button>
+		</div>
+		<div class="hello">
+		<hr>
+			<h4>Hello!</h4>
+			<p id="info">Hopefully you have been inspired by some of these pictures, if you have not looked at the videos page, you should consider clicking on the menu bar to check things out. If you need more inspiration, look at our MeadHelp? app. the app will provide a randomized sequence of different ingredients for you to use.</p>
+		<hr>
+
+		<a href="https://www.facebook.com"><img src="face-book_logo.png" class="face"></a>
+		<a href="mailto:sawyermarchand9@gmail.com"><img src="email.png" class="face" style="margin-left:90px;"></a>
+		<a href="https://www.youtube.com"><img src="youtube_logo.png" class="face" style="margin-left:85px;"></a>
+
+		
+
+		<footer><a href="mead_help_home.html">&copy; 2017 Meadhelp?.com<a> | Legal | Other Helpful Websites</footer>
+
+
+
+
+
+
+		</div>
+		<br>
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			showDivs(slideIndex += n);
+			}
+
+			function currentDiv(n) {
+			showDivs(slideIndex = n);
+			}
+
+			function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+				if (n > x.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = x.length}
+				for (i = 0; i < x.length; i++) {
+    			x[i].style.display = "none";  
+  				}
+				for (i = 0; i < dots.length; i++) {
+    		dots[i].className = dots[i].className.replace(" red", "");
+  			}
+  			x[slideIndex-1].style.display = "block";  
+  			dots[slideIndex-1].className += " red";
+			}
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meadhelp?/App</title>
+	<link rel="stylesheet" type="text/css" href="mead_app_style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body background="back_ground_3.png"> 
+	<div class="top">
+		<img src="mead_logo.png" class="logo">
+		<img src="mead_logo.png" class="logo2">
+		<h1 style="font-size:50px;" class="title">Mead Help?</h1>
+	</div>
+<div>
+
+<div class="backbone">
+<!-- the menu bar in action	 -->
+
+	<div class="container">
+		<a href="index.html"><p>Home</p></a>	
+		<a href="video_page.html"><p>Videos</p></a>
+		<a href="image_page.html"><p>Images</p></a>
+		<a href="meadhelp_feedback.html"><p>Feedback</p></a>
+	</div>
+
+	<h1>Mead Generator</h1>
+
+	<FORM NAME="WordForm">  
+		<INPUT TYPE=TEXT NAME="WordBox" id="wordbox">
+  			<BR>
+
+		<div class="buttons">
+
+		<input TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+		</input>
+
+		<input TYPE=BUTTON onClick="todoList();" id="button2" value="Mark">
+		</input>
+	</FORM>
+
+	<div class="bgt">
+		
+	</div>
+	<ol id="recipelist">
+		<li>1 packet of yeast</li>
+		<li>3/4 a gallon of water</li>
+		<li>3 pounds of honey</li>
+	</ol>
+	
+</div>
+		<a href="https://www.facebook.com"><img src="face-book_logo.png" class="face"></a>
+		<a href="mailto:sawyermarchand9@gmail.com"><img src="email.png" class="face" style="margin-left:90px;"></a>
+		<a href="https://www.youtube.com"><img src="youtube_logo.png" class="face" style="margin-left:85px;"></a>
+
+		<footer><a href="mead_help_home.html">&copy; 2017 Meadhelp?.com<a> | Legal | Other Helpful Websites</footer>
+
+
+
+
+</div>
+<!-- This is just an array in Javascript i made to give a random ingredient -->
+
+<script type="text/javascript">
+
+	var NumberOfWords = 28
+
+	var words = new BuildArray(NumberOfWords)
+
+
+
+	words[1] = "Apple"
+	words[2] = "Lime"
+	words[3] = "Green Tea"
+	words[4] = "Blueberry"
+	words[5] = "Banana"
+	words[6] = "Coconut"
+	words[7] = "Pear"
+	words[8] = "Peach"
+	words[9] = "Chocolate"
+	words[10] = "Rasberry"
+	words[11] = "Coffee"
+	words[12] = "Coffee & Raspberry"
+	words[13] = "Blueberry & Banana"
+	words[14] = "Strawberry & Banana"
+	words[15] = "Strawberry & Chocolate"
+	words[16] = "Blue Raspberry"
+	words[17] = "Peach & Lime"
+	words[18] = "Apple & Pear"
+	words[19] = "Blue Raspberry & Green Tea"
+	words[20] = "Watermelon"
+	words[21] = "Vanilla"
+	words[22] = "Pomegranate"
+	words[23] = "Cranberry"
+	words[24] = "Passionfruit"
+	words[25] = "Gooseberry"
+	words[26] = "Tangelo"
+	words[27] = "Vanilla & Coffee"
+	words[28] = "Coffee & Chocolate"
+
+	function BuildArray(size){
+		this.length = size
+		for (var i = 1; i <= size; i++){
+		this[i] = null}
+		return this
+	}
+
+	function PickRandomWord(frm) {
+// Generate a random number between 1 and NumberOfWords
+	var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+// Display the word inside the text box
+	frm.WordBox.value = words[rnd] 
+	}
+	function todoList(){
+
+	var item = document.getElementById('wordbox').value
+	var text = document.createTextNode(item)
+	var newItem = document.createElement("li")
+	newItem.appendChild(text)
+	document.getElementById("recipelist").appendChild(newItem)
+
+
+	}	
+</script>
+</body>
+</html>
