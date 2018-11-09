@@ -1,0 +1,86 @@
+<!DOCTYPE HTML> 
+<html>
+    <style>
+        img{
+/*
+            height: 100px; 
+            width:100px;
+            position: absolute; 
+            top:220px;
+            left:5px;
+*/
+        }
+    </style>
+<body>
+
+<h2>PokeAPI project 9</h2>
+<input placeholder='Enter a pokemon' id='name'/>
+<br><br>
+<button type="button" onclick="getInfo()">Submit</button>
+<br><br>
+<div id="info"></div>
+
+<script>
+var record;
+
+function getInfo() {
+    var name = document.getElementById('name').value;
+    console.log(name);
+    
+    var xhttp = new XMLHttpRequest();
+    // since Javascript is asynchronous, we respond to a state change event for the request
+    xhttp.onreadystatechange = function() {
+        // if request is successful
+        if (this.readyState == 4 && this.status == 200) {
+            
+            recordStr = this.responseText; // JSON format
+            record = JSON.parse(recordStr);
+            console.log(record);
+            msg = "Name: " + record.name;
+            
+            // get image
+            var imageLink = record.sprites['front_default']; 
+            // console.log(imageLink)
+            msg += "<br><img src='" + imageLink + "' />"
+            
+            // get height and weight divide both by 10
+            msg += '<br>Height: ' + record.height/10 + '   (in meters)';
+            msg += '<br>Weight: ' + record.weight/10 + '    (in kilograms)'; 
+            
+            // get abilities
+            msg += "<br>Abilities: ";
+            for (var i = 0; i < record.abilities.length; i++) {
+                msg += record.abilities[i].ability.name;
+                if (i + 1 != record.abilities.length) {
+                    msg += ", ";
+                }
+            }
+            
+            // get type
+            msg += '<br>Type: ' + record.types[0]['type'].name
+            
+            if(record.weight > 30 && record.height < 5){
+                msg += " <br>(what a heavy little fella)"; 
+            }
+            
+            // console.log(record.sprites['back_default']);
+            document.getElementById("info").innerHTML = msg;
+            document.getElementById("info").style.color = 'black';
+            
+        }
+        
+        else if(this.status == 400 || this.status == 0){
+            document.getElementById("info").innerHTML = 'Enter a valid Pokemon name';
+            document.getElementById("info").style.color = 'red';
+        }
+            
+            
+    }
+        xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/" + name + "/", true);
+        xhttp.send();
+};
+</script>
+
+</body>
+</html>
+
